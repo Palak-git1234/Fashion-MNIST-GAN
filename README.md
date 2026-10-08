@@ -22,7 +22,6 @@ The dataset is loaded directly using TensorFlow/Keras.
 ## 🧠 GAN Architecture
 ### Generator
 The Generator takes a random noise vector of 100 values as input and gradually increases the image size:
-
 100-dimensional Noise
         ↓
 Dense Layer
@@ -65,35 +64,35 @@ Real/Fake Score
 > Fashion-MNIST
 
 🔄 Training Process
-
-During training:
 1.The Generator creates fake images from random noise.
 2.The Discriminator receives both real and fake images.
 3.The Discriminator learns to identify real and fake images.
 4.The Generator learns to create images that can fool the Discriminator.
 5.This process continues for multiple epochs.
-6.The model is trained for 20 epochs.
+The model is trained for 20 epochs.
 
 📈 Results
-
 The project visualizes:
 > Real Fashion-MNIST images
 > Untrained Generator output
 > Generator progress during training
 > Discriminator confidence
 > Real vs. generated fashion images
-
 The same random noise is used for selected epochs to observe how the Generator's output improves during training.
 
 🚀 How to Run
 1.Clone or download this repository.
 2.Open Fashion_MNIST_GAN.ipynb in Jupyter Notebook, JupyterLab, Google Colab, or Kaggle.
-3.Install the required Python libraries if necessary.
-4.Run the notebook cells in order.
-5.The Fashion-MNIST dataset will be loaded automatically through TensorFlow/Keras.
+3.Run the notebook cells in order.
+4.The Fashion-MNIST dataset will be loaded automatically through TensorFlow/Keras.
 
 🎯 Learning Objective
-The main objective of this project is to understand the working of Generative Adversarial Networks and how a Generator and Discriminator learn together to generate realistic images.
+The main objective of this project is to understand:
+
+> How Generative Adversarial Networks work.
+> How a Generator creates new images.
+> How a Discriminator identifies real and fake images.
+> How both networks learn through adversarial training.
 
 🔮 Future Improvements
 Possible improvements include:
@@ -102,3 +101,8 @@ Possible improvements include:
 > Improving image quality.
 > Experimenting with different hyperparameters.
 > Using other image datasets.
+
+👩‍💻 Author
+
+Palak
+MSc Artificial Intelligence
