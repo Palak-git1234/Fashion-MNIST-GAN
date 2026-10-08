@@ -127,5 +127,5 @@ The main objectives of this project are:
 
 Author
 
-~Palak
+Palak
 MSc Artificial Intelligence
