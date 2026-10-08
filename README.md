@@ -1,92 +1,131 @@
-# Fashion-MNIST-GAN
+# Fashion-MNIST GAN
+
 Fashion image generation using a Generative Adversarial Network (GAN) with TensorFlow.
 
 ## 📌 Project Overview
-This project demonstrates how a Generative Adversarial Network (GAN) can learn to generate new fashion-like images using the Fashion-MNIST dataset.
-The GAN consists of two neural networks:
 
-- **Generator** – creates fake fashion images from random noise.
-- **Discriminator** – determines whether an image is real or generated.
-  
-Both networks are trained together in a competitive process. As training progresses, the Generator learns to create more realistic images while the Discriminator learns to distinguish real images from generated ones.
+This project demonstrates how a Generative Adversarial Network (GAN) can generate new fashion-like images using the Fashion-MNIST dataset.
+
+A GAN consists of two neural networks:
+
+- **Generator:** Creates fake images from random noise.
+- **Discriminator:** Determines whether an image is real or fake.
+
+The Generator and Discriminator are trained together. The Generator tries to create realistic images, while the Discriminator tries to distinguish real images from fake ones.
 
 ## 📊 Dataset
-The project uses the **Fashion-MNIST** dataset.
+
+This project uses the **Fashion-MNIST** dataset.
+
 - 60,000 training images
 - 10,000 test images
 - Image size: 28 × 28 pixels
 - Grayscale images
 - 10 fashion categories
-The dataset is loaded directly using TensorFlow/Keras.
+
+The dataset is loaded automatically using TensorFlow/Keras.
 
 ## 🧠 GAN Architecture
 
 ### Generator
-The Generator takes a random noise vector of 100 values as input and gradually increases the image size:
 
-100-dimensional Noise → Dense Layer  → 7 × 7 × 128  →  Reshape  → 7 × 7  →  14 × 14  → 28 × 28 × 1 → Generated Fashion Image
+The Generator takes a 100-dimensional random noise vector and gradually transforms it into a 28 × 28 grayscale image.
 
-### Discriminator
-The Discriminator takes a 28 × 28 grayscale image and gradually reduces it to a single real/fake score:
+```text
+Random Noise (100 values)
+        ↓
+    Dense Layer
+        ↓
+    7 × 7 × 128
+        ↓
+      Reshape
+        ↓
+    7 × 7 Feature Map
+        ↓
+  Conv2DTranspose
+        ↓
+      14 × 14
+        ↓
+  Conv2DTranspose
+        ↓
+     28 × 28 × 1
+        ↓
+   Generated Image
+```
+Discriminator
 
-28 × 28 × 1 Image →  Convolution → 14 × 14  → Convolution  →  7 × 7   →  Flatten  →  Real/Fake Score
+The Discriminator takes a 28 × 28 grayscale image and produces a score indicating whether the image is real or fake.
+```text
+28 × 28 × 1 Image
+        ↓
+      Conv2D
+        ↓
+      14 × 14
+        ↓
+      Conv2D
+        ↓
+       7 × 7
+        ↓
+     Flatten
+        ↓
+     Dense(1)
+        ↓
+   Real/Fake Score
+```
 
 ⚙️ Technologies Used
 
--Python
--TensorFlow
--Keras
--NumPy
--Matplotlib
--Fashion-MNIST
+- Python
+- TensorFlow
+- Keras
+- NumPy
+- Matplotlib
+- Fashion-MNIST
 
 🔄 Training Process
 
--The Generator creates fake images from random noise.
--The Discriminator receives both real and fake images.
--The Discriminator learns to identify real and fake images.
--The Generator learns to create images that can fool the Discriminator.
--This process continues for multiple epochs.
-The model is trained for 20 epochs.
+- The Generator creates fake images from random noise.
+- The Discriminator receives real and fake images.
+- The Discriminator learns to distinguish real images from fake images.
+- The Generator learns to create images that can fool the Discriminator.
+- Both networks are updated using backpropagation and Adam optimization.
+- The model is trained for 20 epochs.
 
 📈 Results
 
 The project visualizes:
+- Real Fashion-MNIST images
+- Untrained Generator output
+- Generator progress during training
+- Discriminator confidence
+- Real vs. generated fashion images
 
--Real Fashion-MNIST images
--Untrained Generator output
--Generator progress during training
--Discriminator confidence
--Real vs. generated fashion images
-The same random noise is used for selected epochs to observe how the Generator's output improves during training.
+The same random noise is used for selected epochs to observe how the Generator's output changes during training.
 
 🚀 How to Run
 
--Clone or download this repository.
--Open Fashion_MNIST_GAN.ipynb in Jupyter Notebook, JupyterLab, Google Colab, or Kaggle.
--Run the notebook cells in order.
--The Fashion-MNIST dataset will be loaded automatically through TensorFlow/Keras.
+- Download or clone this repository.
+- Open Fashion_MNIST_GAN.ipynb.
+- Run the notebook using Jupyter Notebook, Google Colab, or Kaggle.
+- Run the cells in order.
+- The Fashion-MNIST dataset will be loaded automatically through TensorFlow/Keras.
 
 🎯 Learning Objective
 
-The main objective of this project is to understand:
-
--How Generative Adversarial Networks work.
--How a Generator creates new images.
--How a Discriminator identifies real and fake images.
--How both networks learn through adversarial training.
+The main objectives of this project are:
+- Understand how Generative Adversarial Networks work.
+- Understand how a Generator creates new images.
+- Understand how a Discriminator identifies real and fake images.
+- Understand how both networks learn through adversarial training.
 
 🔮 Future Improvements
+- Train the GAN for more epochs.
+- Use a deeper DCGAN architecture.
+- Improve generated image quality.
+- Experiment with different hyperparameters.
+- Test the model on other image datasets.
 
-Possible improvements include:
+Author
 
--Training for more epochs.
--Using a deeper DCGAN architecture.
--Improving image quality.
--Experimenting with different hyperparameters.
-Using other image datasets.
-
-👩‍💻 Author
-
--Palak
+~Palak
 MSc Artificial Intelligence
