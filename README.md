@@ -2,7 +2,6 @@
 Fashion image generation using a Generative Adversarial Network (GAN) with TensorFlow.
 
 ## 📌 Project Overview
-----------------------------
 This project demonstrates how a Generative Adversarial Network (GAN) can learn to generate new fashion-like images using the Fashion-MNIST dataset.
 The GAN consists of two neural networks:
 
@@ -12,7 +11,6 @@ The GAN consists of two neural networks:
 Both networks are trained together in a competitive process. As training progresses, the Generator learns to create more realistic images while the Discriminator learns to distinguish real images from generated ones.
 
 ## 📊 Dataset
-----------------------------
 The project uses the **Fashion-MNIST** dataset.
 - 60,000 training images
 - 10,000 test images
@@ -22,7 +20,7 @@ The project uses the **Fashion-MNIST** dataset.
 The dataset is loaded directly using TensorFlow/Keras.
 
 ## 🧠 GAN Architecture
-------------------------------
+
 ### Generator
 The Generator takes a random noise vector of 100 values as input and gradually increases the image size:
 
@@ -34,7 +32,7 @@ The Discriminator takes a 28 × 28 grayscale image and gradually reduces it to a
 28 × 28 × 1 Image →  Convolution → 14 × 14  → Convolution  →  7 × 7   →  Flatten  →  Real/Fake Score
 
 ⚙️ Technologies Used
--------------------------------
+
 -Python
 -TensorFlow
 -Keras
@@ -43,7 +41,7 @@ The Discriminator takes a 28 × 28 grayscale image and gradually reduces it to a
 -Fashion-MNIST
 
 🔄 Training Process
--------------------------------
+
 -The Generator creates fake images from random noise.
 -The Discriminator receives both real and fake images.
 -The Discriminator learns to identify real and fake images.
@@ -52,7 +50,7 @@ The Discriminator takes a 28 × 28 grayscale image and gradually reduces it to a
 The model is trained for 20 epochs.
 
 📈 Results
---------------------------------
+
 The project visualizes:
 
 -Real Fashion-MNIST images
@@ -63,14 +61,14 @@ The project visualizes:
 The same random noise is used for selected epochs to observe how the Generator's output improves during training.
 
 🚀 How to Run
--------------------------------
+
 -Clone or download this repository.
 -Open Fashion_MNIST_GAN.ipynb in Jupyter Notebook, JupyterLab, Google Colab, or Kaggle.
 -Run the notebook cells in order.
 -The Fashion-MNIST dataset will be loaded automatically through TensorFlow/Keras.
 
 🎯 Learning Objective
--------------------------------
+
 The main objective of this project is to understand:
 
 -How Generative Adversarial Networks work.
@@ -79,7 +77,7 @@ The main objective of this project is to understand:
 -How both networks learn through adversarial training.
 
 🔮 Future Improvements
-------------------------------
+
 Possible improvements include:
 
 -Training for more epochs.
