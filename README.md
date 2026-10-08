@@ -32,60 +32,60 @@ The Discriminator takes a 28 × 28 grayscale image and gradually reduces it to a
 
 ⚙️ Technologies Used
 
-Python
-TensorFlow
-Keras
-NumPy
-Matplotlib
-Fashion-MNIST
+-Python
+-TensorFlow
+-Keras
+-NumPy
+-Matplotlib
+-Fashion-MNIST
 
 🔄 Training Process
 
-The Generator creates fake images from random noise.
-The Discriminator receives both real and fake images.
-The Discriminator learns to identify real and fake images.
-The Generator learns to create images that can fool the Discriminator.
-This process continues for multiple epochs.
+-The Generator creates fake images from random noise.
+-The Discriminator receives both real and fake images.
+-The Discriminator learns to identify real and fake images.
+-The Generator learns to create images that can fool the Discriminator.
+-This process continues for multiple epochs.
 The model is trained for 20 epochs.
 
 📈 Results
 
 The project visualizes:
 
-Real Fashion-MNIST images
-Untrained Generator output
-Generator progress during training
-Discriminator confidence
-Real vs. generated fashion images
+-Real Fashion-MNIST images
+-Untrained Generator output
+-Generator progress during training
+-Discriminator confidence
+-Real vs. generated fashion images
 The same random noise is used for selected epochs to observe how the Generator's output improves during training.
 
 🚀 How to Run
 
-Clone or download this repository.
-Open Fashion_MNIST_GAN.ipynb in Jupyter Notebook, JupyterLab, Google Colab, or Kaggle.
-Run the notebook cells in order.
-The Fashion-MNIST dataset will be loaded automatically through TensorFlow/Keras.
+-Clone or download this repository.
+-Open Fashion_MNIST_GAN.ipynb in Jupyter Notebook, JupyterLab, Google Colab, or Kaggle.
+-Run the notebook cells in order.
+-The Fashion-MNIST dataset will be loaded automatically through TensorFlow/Keras.
 
 🎯 Learning Objective
 
 The main objective of this project is to understand:
 
-How Generative Adversarial Networks work.
-How a Generator creates new images.
-How a Discriminator identifies real and fake images.
-How both networks learn through adversarial training.
+-How Generative Adversarial Networks work.
+-How a Generator creates new images.
+-How a Discriminator identifies real and fake images.
+-How both networks learn through adversarial training.
 
 🔮 Future Improvements
 
 Possible improvements include:
 
-Training for more epochs.
-Using a deeper DCGAN architecture.
-Improving image quality.
-Experimenting with different hyperparameters.
+-Training for more epochs.
+-Using a deeper DCGAN architecture.
+-Improving image quality.
+-Experimenting with different hyperparameters.
 Using other image datasets.
 
 👩‍💻 Author
 
-Palak
+-Palak
 MSc Artificial Intelligence
